@@ -1,11 +1,5 @@
 const request = require('supertest');
-const express = require('express');
-const app = express();
-
-app.get('/suma', (req, res) => {
-    const { a, b } = req.query;
-    res.json({ result: Number(a) + Number(b) });
-});
+const app = require('../app');
 
 describe('GET /suma', () => {
     it('should return sum', async () => {
